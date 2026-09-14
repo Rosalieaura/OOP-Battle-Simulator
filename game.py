@@ -1,5 +1,5 @@
 from goblin import Goblin
-
+from hero import Hero
 
 ARENA_NAME = "Aura bura"
 
@@ -16,7 +16,17 @@ def main():
     print("But no hero has answered the call... yet.")
 
     NewGobblin= Goblin("house")
+    print("Omg I can feel the haha phonk coming, aura is arriving")
+
+    aura = Hero("aura")
+    auraAttackNumber = aura.attack()
+    goblin.take_damage(auraAttackNumber)
+    if goblin.health > 0:
+        goblinAttackNumber = goblin.attack()
+        print("Ou sart shes coming baclk, RUN AURA!")
+        aura.take_damage(goblinAttackNumber)
 
 
 if __name__ == "__main__":
     main()
+
